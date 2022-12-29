@@ -1,77 +1,73 @@
-# RENAME-PRO
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
-# NOTE [READ THIS]
+### Contents
+- [Info](#info)
+- [Deploy](##deployment-support)
+- [Configs](#configs)
+- [Bot Commands](#botfather-commands)
+- [Members](#follow-me)
 
-AFTER FORK DON'T FORGET TO MAKE YOUR OWN DEPLOY LINK OTHERWISE BOT WILL NOT WORK
+### Info
+This is a PowerFull Telegram File Rename and thumbnail & caption Changer Bot with High Speed
 
-## DEMO-BOT 👇👇
+### DEPLOYEMENT SUPPORT
 
-[RENAME PRO ROBOT](https://t.me/Hx_RenameBot)
-
-
-
-
-A File Rename Bot with Custom Thumbnail Support
-
-
-
-<p align="center">
-  <a href="https://www.python.org">
-    <img src="http://ForTheBadge.com/images/badges/made-with-python.svg">
-
-  </a>
+<details><summary>Deploy To Koyeb</summary>
+<p>
+<br>
+<a href="https://app.koyeb.com/deploy?type=git&repository=github.com/oVo-HxBots/RENAME-PRO&branch=main&name=rename-pro&env[API_HASH]=1&env[API_ID]=1&env[BOT_TOKEN]=1&env[ADMIN]=1&env[DB_URL]=1&env[DB_NAME]=rename-pro&env[FORCE_SUB]=1&run_command=python%20bot.py">
+  <img src="https://www.koyeb.com/static/images/deploy/button.svg" alt="Deploy">
+</a>
 </p>
+</details>
+
+
+
+<details><summary>Deploy To Heroku</summary>
+<p>
+<br>
+<a href="https://heroku.com/deploy?template=https://github.com/oVo-HxBots/RENAME-PRO">
+  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
+</a>
 </p>
+</details>
 
 
 
+### Configs 
 
+* `BOT_TOKEN`  - Get bot token from @BotFather
 
+* `API_ID` - From my.telegram.org 
 
-## Configs 
+* `API_HASH` - From my.telegram.org 
 
-* TG_BOT_TOKEN  - Get bot token from @BotFather
+* `ADMIN` - AUTH or bot controllers id's multiple id use space to split 
 
-* API_ID        - From my.telegram.org 
-
-* API_HASH      - From my.telegram.org 
-
-* ADMIN         - Your User ID 
-
-* DATABASE_NAME  - Your database name from mongoDB. Default will be 'my'
-
-* DATABASE_URI  - Mongo Database URL from https://cloud.mongodb.com/
-
-# HOW TO FILL -
-
-EXAMPLE - mongodb+srv://[UserName]:[password]@cluster0.dciqs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-
-FILL THIS WAY 👇
-
-mongodb+srv://MRUSERNAME:MRPASSWORD@cluster0.dciqs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-
-
-
-
-
-### Deploy to Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?)
-
+<<<<<<< Updated upstream
 ### Deploy to Koyeb
 [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/RachelSaini/RENAME-PRO&branch=main&name=rename-pro&env[API_HASH]=1&env[APP_ID]=1&env[TOKEN]=1&env[ADMIN]=1&env[DB_URL]=1&env[DB_NAME]=rename-pro&run_command=python%20bot.py)
+=======
+* `DB_URL`  - Mongo Database URL from https://cloud.mongodb.com/
+>>>>>>> Stashed changes
 
+* `DB_NAME`  - Your database name from mongoDB. Default will be 'my'
 
-## Bot Commands
-> Check Bot Status
-* `/start` Check bot Status
-> View Thumbnail 
-* `/viewthumb` View Thumbnail 
-> Delete Thumbnail
-* `/delthumb` Delete Thumbnail
-> Broadcast Message
-* `/broadcast` 'your message'
+* `FORCE_SUB` - your force sub channel username without @ 
 
+* `START_PIC` - start message photo
 
+### Botfather Commands
+```
+start - bot alive cheking
+viewthumb - View Thumbnail
+delthumb - Delete Thumbnail
+set_caption - set a custom caption
+see_caption - see your custom caption
+del_caption - delete custom caption
+users - admin only
+broadcast - admin only
+```
 
 ## Follow Me🔥:
 
@@ -86,8 +82,3 @@ mongodb+srv://MRUSERNAME:MRPASSWORD@cluster0.dciqs.mongodb.net/myFirstDatabase?r
 <a href="https://instagram.com/HxBots"><img src="https://img.shields.io/badge/Instagram-HxBots-magenta?style=for-the-badge&logo=instagram"></a>
 </p>
 
-##  CONTACT ME ON ⬇️ 
-
-<p align="left">
-<a href="https://t.me/Kirodewal"><img src="https://img.shields.io/badge/Kirodewal-darkblue?style=for-the-badge&logo=telegram"></a>
-</p>

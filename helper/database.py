@@ -1,36 +1,52 @@
-import pymongo 
-import os
+import motor.motor_asyncio
+from config import DB_URL, DB_NAME
 
-DB_NAME = os.environ.get("DB_NAME","")
-DB_URL = os.environ.get("DB_URL","")
-mongo = pymongo.MongoClient(DB_URL)
-db = mongo[DB_NAME]
-dbcol = db["user"]
+class Database:
 
-def insert(chat_id):
-            user_id = int(chat_id)
-            user_det = {"_id":user_id,"file_id":None}
-            try:
-            	dbcol.insert_one(user_det)
-            except:
-            	pass
+    def __init__(self, uri, database_name):
+        self._client = motor.motor_asyncio.AsyncIOMotorClient(uri)
+        self.db = self._client[database_name]
+        self.col = self.db.user
 
-def addthumb(chat_id, file_id):
-	dbcol.update_one({"_id":chat_id},{"$set":{"file_id":file_id}})
-	
-def delthumb(chat_id):
-	dbcol.update_one({"_id":chat_id},{"$set":{"file_id":None}})
-	
-def find(chat_id):
-	id =  {"_id":chat_id}
-	x = dbcol.find(id)
-	for i in x:
-             lgcd = i["file_id"]
-             return lgcd 
+    def new_user(self, id):
+        return dict(
+            _id=int(id),                                   
+            file_id=None,
+            caption=None
+        )
 
-def getid():
-    values = []
-    for key  in dbcol.find():
-         id = key["_id"]
-         values.append((id)) 
-    return values
+    async def add_user(self, id):
+        user = self.new_user(id)
+        await self.col.insert_one(user)
+
+    async def is_user_exist(self, id):
+        user = await self.col.find_one({'_id': int(id)})
+        return bool(user)
+
+    async def total_users_count(self):
+        count = await self.col.count_documents({})
+        return count
+
+    async def get_all_users(self):
+        all_users = self.col.find({})
+        return all_users
+
+    async def delete_user(self, user_id):
+        await self.col.delete_many({'_id': int(user_id)})
+    
+    async def set_thumbnail(self, id, file_id):
+        await self.col.update_one({'_id': int(id)}, {'$set': {'file_id': file_id}})
+
+    async def get_thumbnail(self, id):
+        user = await self.col.find_one({'_id': int(id)})
+        return user.get('file_id', None)
+
+    async def set_caption(self, id, caption):
+        await self.col.update_one({'_id': int(id)}, {'$set': {'caption': caption}})
+
+    async def get_caption(self, id):
+        user = await self.col.find_one({'_id': int(id)})
+        return user.get('caption', None)
+
+
+db = Database(DB_URL, DB_NAME)
