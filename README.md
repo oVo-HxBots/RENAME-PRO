@@ -1,4 +1,4 @@
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+﻿<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 ### Contents
 - [Info](#info)
@@ -15,7 +15,7 @@ This is a PowerFull Telegram File Rename and thumbnail & caption Changer Bot wit
 <details><summary>Deploy To Koyeb</summary>
 <p>
 <br>
-<a href="https://app.koyeb.com/deploy?type=git&repository=github.com/oVo-HxBots/RENAME-PRO&branch=main&name=rename-pro&env[API_HASH]=1&env[API_ID]=1&env[BOT_TOKEN]=1&env[ADMIN]=1&env[DB_URL]=1&env[DB_NAME]=rename-pro&env[FORCE_SUB]=1&run_command=python%20bot.py">
+<a href="https://app.koyeb.com/deploy?type=git&repository=github.com/oVo-HxBots/RENAME-PRO&branch=main&name=rename-pro&env[API_HASH]=1&env[API_ID]=1&env[BOT_TOKEN]=1&env[ADMIN]=1&env[DB_URL]=1&env[DB_NAME]=rename-pro&env[FORCE_SUB]=1&env[START_PIC]=https://telegra.ph/file/d4d3bc4272c732c1aba7f.jpg&run_command=python%20bot.py">
   <img src="https://www.koyeb.com/static/images/deploy/button.svg" alt="Deploy">
 </a>
 </p>
@@ -44,12 +44,7 @@ This is a PowerFull Telegram File Rename and thumbnail & caption Changer Bot wit
 
 * `ADMIN` - AUTH or bot controllers id's multiple id use space to split 
 
-<<<<<<< Updated upstream
-### Deploy to Koyeb
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/RachelSaini/RENAME-PRO&branch=main&name=rename-pro&env[API_HASH]=1&env[APP_ID]=1&env[TOKEN]=1&env[ADMIN]=1&env[DB_URL]=1&env[DB_NAME]=rename-pro&run_command=python%20bot.py)
-=======
 * `DB_URL`  - Mongo Database URL from https://cloud.mongodb.com/
->>>>>>> Stashed changes
 
 * `DB_NAME`  - Your database name from mongoDB. Default will be 'my'
 
