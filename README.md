@@ -57,6 +57,8 @@ mongodb+srv://MRUSERNAME:MRPASSWORD@cluster0.dciqs.mongodb.net/myFirstDatabase?r
 ### Deploy to Heroku
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?)
 
+### Deploy to Koyeb
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/RachelSaini/RENAME-PRO&branch=main&name=rename-pro&env[API_HASH]=1&env[APP_ID]=1&env[TOKEN]=1&env[ADMIN]=1&env[DB_URL]=1&env[DB_NAME]=rename-pro&run_command=python%20bot.py)
 
 
 ## Bot Commands
