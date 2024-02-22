@@ -1,48 +1,147 @@
+
 {
-    "name": "Renamer Bot",
-    "description": "Telegram File Renamer Bot ",
-    "logo": "https://graph.org/file/91ab4b346dddd0652958c.jpg",
-    "keywords": ["Renamer Bot", "Mongo DB"],    
+
+    "name": "RenameBot-Premium",
+
+    "description": "4GB Rename Bot With Premium Support",
+
+    "keywords": ["Premium Renamer Bot ", "4GB File", "telegram", "HxBots" ],
+
     "repository": "https://github.com/oVo-HxBots/RENAME-PRO",
+
+    "success_url": "https://t.me/HxBots",
+
     "env": {
+
+        "FORCE_SUBS": {
+
+            "description" : "Channel or Group user Name With @",
+
+            "value" : "HxBots",
+
+            "required" : false
+
+            
+
+         },
+
+        "STRING": {
+
+            "description" : "Pyrogram String Session",
+
+            "value" : "",
+
+            "required" : false
+
+        },
+
         "API_ID": {
-            "description": "Your APP ID From my.telegram.org ",
-            "value": ""
+
+            "description" : "Your APP ID From my.telegram.org ",
+
+            "value" : "",
+
+            "required" : true
+
         },
+
         "API_HASH": {
-            "description": "Your API Hash From my.telegram.org ",
-            "value": ""
+
+            "description" : "Your API Hash From my.telegram.org ",
+
+            "value" : "",
+
+            "required" : true
+
         },
-        "FORCE_SUB": {
-            "description": "Your force sub channel user name without [@] ",
-            "value": "",
-            "required": false 
-        },
+
         "BOT_TOKEN": {
-            "description": "Your Bot Token From @BotFather",
-            "value": ""
+
+            "description" : "Your Bot Token From @BotFather",
+
+            "value" : "",
+
+            "required" : true
+
         },
-        "ADMIN": {
-            "description":"Add Your User ID multiple is use space to split"
+
+        "OWNER": {
+
+            "description" : "Add Your User ID",
+
+            "value" : "",
+
+            "required" : true
+
         },
-        "DB_URL": {
-            "description": "Your Mongo DB URL Obtained From mongodb.com",
-            "value": ""
+
+        "DB_URL":{
+
+             "description" : "Database Url Get It From Mongo DB",
+
+             "value" : "",
+
+             "required" : true
+
+
         },
-        "DB_NAME":{ 
-            "description":"Your Mongo DB Database Name ",
-            "value": "rename-pro",
-            "required": false
+
+        "DB_NAME":{
+
+               "description" : "Database Name ",
+
+               "value" : "rename-premium",
+
+               "required" : false
+
         },
-        "START_PIC": {
-            "description": "Your Bot start cmd Pic from",
-            "value": "",
-            "required": false
+
+        "LOG_CHANNEL":{
+
+             "description" : "Channel Id Nedd Store Files Get Your channel id from Rose @MissRose_bot",
+
+             "value" : "-1002031041556",
+
+             "required" : true
+
+        },
+        "BOT_PIC":{
+
+            "description" : "Start up pic of your bot. Get from telegraph_Bot",
+
+            "value" : "https://graph.org/file/cca849a2f63053fa3f622.jpg",
+
+            "required" : false
+
+       },
+        "BOT_USERNAME":{
+
+            "description" : "Add bot username without @",
+
+            "value" : "Hx_RenameBot",
+
+            "required" : true
+
         }
+
+        
+
     },
+
     "buildpacks": [
-        {
-            "url": "heroku/python"
-        }
+
+      {
+
+        "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+
+      },
+
+      {
+
+        "url": "heroku/python"
+
+      }
+
     ]
+
 }

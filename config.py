@@ -1,22 +1,27 @@
-import re, os
+import os, re
 
-id_pattern = re.compile(r'^.\d+$') 
 
-API_ID = os.environ.get("API_ID", "")
-
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+API_ID = int(os.environ.get("API_ID", ""))
 API_HASH = os.environ.get("API_HASH", "")
+OWNER = int(os.environ.get("OWNER", ""))
+BOT_USERNAME = os.environ.get('BOT_USERNAME', "")
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
+FORCE_SUBS = os.environ.get("FORCE_SUBS", "HxBots")
+LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002031041556"))
 
-FORCE_SUB = os.environ.get("FORCE_SUB", "") 
+DB_URL = os.environ.get("DB_URL", "")
+DB_NAME = os.environ.get("DB_NAME", "renamebot-premium")
 
-DB_NAME = os.environ.get("DB_NAME","")     
+STRING = os.environ.get("STRING", "")
+BOT_PIC = os.environ.get("BOT_PIC", "https://graph.org/file/cca849a2f63053fa3f622.jpg")
 
-DB_URL = os.environ.get("DB_URL","")
- 
-FLOOD = int(os.environ.get("FLOOD", "10"))
 
-START_PIC = os.environ.get("START_PIC", "")
 
-ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '').split()]
 
+
+# if you need to add verify system then dm me on telegram
+
+SHORTNER_URL = os.environ.get("SHORTNER_URL", "")
+SHORTNER_API = os.environ.get("SHORTNER_API", "")
+TOKEN_TIMEOUT = os.environ.get("TOKEN_TIMEOUT", "")
