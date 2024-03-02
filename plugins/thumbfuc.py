@@ -4,7 +4,7 @@ from helper.database import find, delthumb, addthumb, viewthumb
 @Client.on_message(filters.private & filters.command(['viewthumb']))
 async def viewthumbs(client,message):
 		print(message.chat.id)
-		thumb = viewthumb(message.chat.id, file_id)
+		thumb = find(int(message.chat.id))[0]
 		if thumb :
 			await client.send_photo(message.chat.id,photo =f"{thumb}")
 		else:
