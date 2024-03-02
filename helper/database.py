@@ -1,4 +1,5 @@
 import pymongo
+import motor.motor_asyncio
 import os
 from helper.date import add_date
 from config import *
@@ -50,6 +51,9 @@ def insert(chat_id):
 def addthumb(chat_id, file_id):
     dbcol.update_one({"_id": chat_id}, {"$set": {"file_id": file_id}})
 
+def viewthumb(self, id):
+        user = dbcol.find_one({'_id': chat_id})
+        return user.get('file_id', None)
 
 def delthumb(chat_id):
     dbcol.update_one({"_id": chat_id}, {"$set": {"file_id": None}})
