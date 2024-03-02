@@ -1,5 +1,4 @@
 import pymongo
-import motor.motor_asyncio
 import os
 from helper.date import add_date
 from config import *
