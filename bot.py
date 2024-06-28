@@ -1,7 +1,7 @@
 from pyrogram import Client, idle
 from plugins.cb_data import app as Client2
 from config import *
-
+from web import keep_alive
 
 
 bot = Client(
@@ -27,3 +27,7 @@ if STRING:
     
 else:
     bot.run()
+
+if __name__ == "__main__":
+    keep_alive()
+    app.run()
